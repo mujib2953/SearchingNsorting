@@ -2,7 +2,7 @@
 * @Author: mujibur
 * @Date:   2017-06-07 15:45:02
 * @Last Modified by:   mujibur
-* @Last Modified time: 2017-06-07 17:07:01
+* @Last Modified time: 2017-06-07 17:27:47
 */
 
 'use strict';
@@ -21,7 +21,7 @@
 
 		$( '#bubbleBtn' ).off( 'click' ).on( 'click', sortByBubbleSort.bind( oScope ) );
 		$( '#selectionBtn' ).off( 'click' ).on( 'click', sortBySelectionSort.bind( oScope ) );
-		$( '#selectionBtn' ).off( 'click' ).on( 'click', sortByInsertionSort.bind( oScope ) );
+		$( '#InsertionBtn' ).off( 'click' ).on( 'click', sortByInsertionSort.bind( oScope ) );
 
 	};
 	oScope.addDashed = function() {
