@@ -2,7 +2,7 @@
 * @Author: mujibur
 * @Date:   2017-06-07 17:07:27
 * @Last Modified by:   mujibur
-* @Last Modified time: 2017-06-07 17:27:28
+* @Last Modified time: 2017-06-07 17:36:18
 */
 
 'use strict';
@@ -17,7 +17,6 @@ function sortByInsertionSort(argument) {
 
 
 	this.calculateEstimate( false );
-	console.log( this.arrayToSort );
 	console.log( '--- Insertion Sort Ended ---' );
 	this.addDashed();
 };

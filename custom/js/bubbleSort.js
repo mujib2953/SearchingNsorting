@@ -2,7 +2,7 @@
 * @Author: mujibur
 * @Date:   2017-06-07 15:44:52
 * @Last Modified by:   mujibur
-* @Last Modified time: 2017-06-07 16:50:09
+* @Last Modified time: 2017-06-07 17:36:04
 */
 
 'use strict';
@@ -26,7 +26,6 @@ function sortByBubbleSort() {
 		}
 	}
 	this.calculateEstimate( false );
-	console.log( this.arrayToSort );
 	console.log( '--- Bubble Sort Ended ---' );
 	this.addDashed();
 }
