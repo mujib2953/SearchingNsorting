@@ -2,13 +2,14 @@
 * @Author: mujibur
 * @Date:   2017-06-07 15:45:02
 * @Last Modified by:   mujibur
-* @Last Modified time: 2017-06-07 17:34:44
+* @Last Modified time: 2017-06-08 09:48:03
 */
 
 'use strict';
 ( function() {
 	var ogArray = []
 	var oScope = {
+		arrayElmCount: 100000,
 		arrayToSort: []
 	};
 	$( document ).ready( function() {
@@ -20,9 +21,10 @@
 	});
 
 	function generate10kValues() {
+		var nLen = this.arrayElmCount;
 
-		for( var i = 0; i < 10000; i++ ) {
-			var rand = getRandomInt( -99999, 99999 ) 
+		for( var i = 0; i < nLen; i++ ) {
+			var rand = getRandomInt( -999999, 999999 );
 			ogArray.push( rand );
 		}
 		this.arrayToSort = ogArray;
