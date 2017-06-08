@@ -2,7 +2,7 @@
 * @Author: mujibur
 * @Date:   2017-06-07 15:45:02
 * @Last Modified by:   mujibur
-* @Last Modified time: 2017-06-08 09:48:03
+* @Last Modified time: 2017-06-08 15:17:19
 */
 
 'use strict';
@@ -38,7 +38,8 @@
 
 		$( '#bubbleBtn' ).off( 'click' ).on( 'click', sortByBubbleSort.bind( oScope ) );
 		$( '#selectionBtn' ).off( 'click' ).on( 'click', sortBySelectionSort.bind( oScope ) );
-		$( '#InsertionBtn' ).off( 'click' ).on( 'click', sortByInsertionSort.bind( oScope ) );
+		// $( '#InsertionBtn' ).off( 'click' ).on( 'click', sortByInsertionSort.bind( oScope ) );
+		$( '#MergeBtn' ).off( 'click' ).on( 'click', sortByMergeSort.bind( oScope ) );
 
 	};
 	oScope.addDashed = function() {
