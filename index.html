@@ -15,6 +15,7 @@
         <script type="text/javascript" src="custom/js/heapSort.js"></script>
 
         <link rel="stylesheet" type="text/css" href="vendor/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="custom/css/custom.css">
     </head>
     <body>
 
@@ -23,20 +24,30 @@
                 <h1>Welcome to sorting</h1>
                 <p>We will sort the following array in different manner.</p>
                 <p>Click the button of different sorting techniques and see the console for the output. This will sort the 1, 00, 000 values in array and give the estimated seconds it took to sort.</p>
-                <button type="button" class="btn btn-info" id="bubbleBtn">Bubble Sort</button>
-                <p class="bubble-output"></p>
+                
+                <p class="bubble-output sMsg">1. Bubble Sort
+                    <button type="button" class="btn btn-info  pullRight" id="bubbleBtn">Bubble Sort</button>
+                </p>
+                
+                <p class="selection-output sMsg">2. Selection Sort
+                    <button type="button" class="btn btn-info  pullRight" id="selectionBtn">Selection Sort</button>
+                </p>
+                
 
-                <button type="button" class="btn btn-info" id="selectionBtn">Selection Sort</button>
-                <p class="selection-output"></p>
+                <p class="insertion-output sMsg">3. Insertion Sort
+                    <button type="button" class="btn btn-info  pullRight disabled" id="InsertionBtn">Insertion Sort</button>
+                </p>
+                
 
-                <button type="button" class="btn btn-info disabled" id="InsertionBtn">Insertion Sort</button>
-                <p class="insertion-output"></p>
+                <p class="merge-output sMsg">4. Merge Sort
+                    <button type="button" class="btn btn-info  pullRight" id="MergeBtn">Merge Sort</button>
+                </p>
+                
 
-                <button type="button" class="btn btn-info" id="MergeBtn">Merge Sort</button>
-                <p class="merge-output"></p>
-
-                <button type="button" class="btn btn-info" id="HeapBtn">Heap Sort</button>
-                <p class="heap-output"></p>
+                <p class="heap-output sMsg">5. Heap Sort
+                    <button type="button" class="btn btn-info  pullRight" id="HeapBtn">Heap Sort</button>
+                </p>
+                
             </div>
     	</div>
     </body>

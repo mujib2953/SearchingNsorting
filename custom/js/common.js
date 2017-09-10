@@ -1,15 +1,15 @@
 /*
 * @Author: mujibur
 * @Date:   2017-06-07 15:45:02
-* @Last Modified by:   mujibur
-* @Last Modified time: 2017-06-08 15:49:50
+* @Last Modified by:   Mujib Ansari
+* @Last Modified time: 2017-08-24 13:32:01
 */
 
 'use strict';
 ( function() {
 	var ogArray = []
 	var oScope = {
-		arrayElmCount: 100000,
+		arrayElmCount: 100,
 		arrayToSort: []
 	};
 	$( document ).ready( function() {

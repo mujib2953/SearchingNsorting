@@ -1,0 +1,24 @@
+/*
+* @Author: Mujib Ansari
+* @Date:   2017-08-24 13:35:17
+* @Last Modified by:   Mujib Ansari
+* @Last Modified time: 2017-08-24 14:09:02
+*/
+
+
+.inline {
+	display: inline-block;
+}
+
+.pullRight {
+	float: right;
+	clear: both;
+}
+.pullLeft {
+	float: left;
+}
+
+.sMsg {
+	font-size: 15px !important;
+	margin-bottom: 20px !important;
+}
