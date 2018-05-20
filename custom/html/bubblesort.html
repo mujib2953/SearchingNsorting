@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bubble Sort</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>Bubble Sort</h1>
+    <canvas 
+        id="bubbleSort"
+        width="600"
+        height="600"
+    >
+        Your Browser does not Supprt Canvas...
+    </canvas>
+    <script type="text/js">
+        
+        requirejs( [ 'commonJS', 'bubleSort' ], function() {
+            let bubbleObj = new BubbleSort( 'bubbleSort' );
+        } );
+
+    </script>
+</body>
+</html>

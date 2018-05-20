@@ -1,38 +1,55 @@
 /*
-* @Author: mujibur
-* @Date:   2017-06-07 16:59:16
-* @Last Modified by:   mujibur
-* @Last Modified time: 2017-06-07 17:37:16
-*/
+ * @Author: Mujib Ansari 
+ * @Date: 2018-05-20 20:40:42 
+ * @Last Modified by:   Mujib Ansari 
+ * @Last Modified time: 2018-05-20 20:40:42 
+ */
 
 'use strict';
-function sortBySelectionSort() {
-	this.addDashed();
-	console.log( '--- Selection Sort Started ---' );
 
-	// ---- reseting array
-	this.resetArray();
-	this.calculateEstimate( true );
-	
-	var minInx,
-		nLen = this.arrayToSort.length,
-		i = 0,
-		j;
+(
+	function() {
 
-	for( ; i < nLen; i++ ) {
-		minInx = i;
+		let SelectionSort = function( p_data ) {
 
-		for( j = ( i + 1 ); j < nLen; j++ ) {
+			addDash();
+			logInfoMessage( 'Selection Sort' );
+			calcEstimate( true );
 
-			if( this.arrayToSort[ j ] < this.arrayToSort[ minInx ] )
-				minInx = j
+			doSelectionSort( p_data, () => {
+				calcEstimate( false );
+			} );
 
-		}
-		this.swap( this.arrayToSort, i, minInx )
-	}
+			function doSelectionSort( p_data, p_fcallback ) {
+
+				let testArr = [ ...p_data ],
+					nLen = testArr.length;
+				// console.log( testArr );
+				for( let i  = 0; i < nLen; i++ ) {
+
+					let nMinPos = i;
+					
+					for( let j = ( i + 1 ); j < nLen; j++ ) {
+
+						if( testArr[ j ] < testArr[ nMinPos ] )
+							nMinPos = j;
+
+					}
+
+					let temp = testArr[ i ];
+
+					testArr[ i ] = testArr[ nMinPos ];
+					testArr[ nMinPos ] = temp;
 
 
-	this.calculateEstimate( false );
-	console.log( '--- Selection Sort Ended ---' );
-	this.addDashed();
-}
+				}
+				// console.log( testArr );
+				if( p_fcallback )
+					p_fcallback();
+			}
+
+		};
+
+		window.SelectionSort = SelectionSort;
+	}()
+);

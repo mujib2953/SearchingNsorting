@@ -1,31 +1,56 @@
 /*
-* @Author: mujibur
-* @Date:   2017-06-07 15:44:52
-* @Last Modified by:   mujibur
-* @Last Modified time: 2017-06-07 17:36:04
-*/
+ * @Author: Mujib Ansari 
+ * @Date: 2018-05-20 16:47:31 
+ * @Last Modified by: Mujib Ansari
+ * @Last Modified time: 2018-05-20 16:51:58
+ */
 
 'use strict';
-function sortByBubbleSort() {
-	this.addDashed();
-	console.log( '--- Bubble Sort Started ---' );
 
-	// ---- reseting array
-	this.resetArray();
-	this.calculateEstimate( true );
-	var nLen = this.arrayToSort.length,
-		i = nLen - 1,
-		j;
+( function() {
 
-	for( ; i >= 0; i-- ) {
-		for( j = 1; j < i; j++ ) {
+	let BubbleSort = function( p_data ) {
+		
+		addDash();
+		logInfoMessage( 'Bubble Sort' );
+		calcEstimate( true );
 
-			if( this.arrayToSort[ j - 1 ] > this.arrayToSort[ j ] )
-				this.swap( this.arrayToSort, ( j - 1 ), j );
+		doBubleSort( p_data, () => {
+			calcEstimate( false );
+			// addDash();
+		} );
 
+		function doBubleSort( p_data, p_callback ) {
+			
+			let testArr = [ ...p_data ],
+				nLen = testArr.length;
+			// console.log( testArr );
+			for( let i = 0; i < ( nLen - 1 ); i++ ) {
+
+				for( let j = ( i + 1 ) ; j < nLen; j++ ) {
+					
+					// ---- 
+					// console.log( ' i :: ' + i + ' j ::: ' + j );
+
+					if( testArr[ i ] > testArr[ j ] ) {
+
+						let temp = testArr[ i ];
+
+						testArr[ i ] = testArr[ j ];
+
+						testArr[ j ] = temp;
+
+					}
+
+				}
+
+			}
+			// console.log( testArr );
+			if( p_callback )
+				p_callback();
 		}
+
 	}
-	this.calculateEstimate( false );
-	console.log( '--- Bubble Sort Ended ---' );
-	this.addDashed();
-}
+
+	window.BubbleSort = BubbleSort;
+}( window ) );

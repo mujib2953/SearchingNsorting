@@ -3,7 +3,15 @@
     <head>
         <meta charset="utf-8">
 
-        <script type="text/javascript" src="vendor/js/jquery.min.js"></script>
+
+        <script 
+            data-main="./custom/js/main.js"
+            type="text/javascript"
+            src="./vendor/js/require.js"
+        ></script>
+
+    
+        <!-- <script type="text/javascript" src="vendor/js/jquery.min.js"></script>
         <script type="text/javascript" src="vendor/js/bootstrap.min.js"></script>
 
 
@@ -12,7 +20,8 @@
         <script type="text/javascript" src="custom/js/selectionSort.js"></script>
         <script type="text/javascript" src="custom/js/insertionSort.js"></script>
         <script type="text/javascript" src="custom/js/mergeSort.js"></script>
-        <script type="text/javascript" src="custom/js/heapSort.js"></script>
+        <script type="text/javascript" src="custom/js/heapSort.js"></script> -->
+
 
         <link rel="stylesheet" type="text/css" href="vendor/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="custom/css/custom.css">
@@ -21,16 +30,45 @@
 
     	<div class="container">
             <div class="jumbotron">
-                <h1>Welcome to sorting</h1>
-                <p>We will sort the following array in different manner.</p>
-                <p>Click the button of different sorting techniques and see the console for the output. This will sort the 1, 00, 000 values in array and give the estimated seconds it took to sort.</p>
+                <h1>
+                    Welcome to SortingWorld.
+                </h1>
+                <p>
+                    Here I'm just doing a small experiments with all sorting Algorithms to know which is the best sorting technique to sort for huge amount of data.
+                </p>
+                <br />
+                <p>
+                    To do so I'm using a numeric array of length 10,000 having random Integers.
+                </p>
+                <br />
+                <p>
+                    Click the button of different sorting techniques and see the console for the output. This will sort the  array with corresponding sorting technique and give the estimated seconds it took to sort.
+                </p>
+                <br />
+                <p>
+                    Note: The time took to sort is totally depends on Your System configuration and load on CPU.
+                </p>
                 
                 <p class="bubble-output sMsg">1. Bubble Sort
-                    <button type="button" class="btn btn-info  pullRight" id="bubbleBtn">Bubble Sort</button>
+                    <button 
+                        type="button"
+                        class="btn btn-info  pullRight" 
+                        id="bubbleBtn"
+                        pageName="BubbleSort"
+                    >
+                        Bubble Sort
+                    </button>
                 </p>
                 
                 <p class="selection-output sMsg">2. Selection Sort
-                    <button type="button" class="btn btn-info  pullRight" id="selectionBtn">Selection Sort</button>
+                    <button 
+                        type="button"
+                        class="btn btn-info pullRight"
+                        id="selectionBtn"
+                        pageName="SelectionSort"
+                    >
+                        Selection Sort
+                    </button>
                 </p>
                 
 
