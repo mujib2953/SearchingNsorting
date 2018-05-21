@@ -1,61 +1,39 @@
 /*
-* @Author: mujibur
-* @Date:   2017-06-08 15:07:05
-* @Last Modified by:   mujibur
-* @Last Modified time: 2017-06-08 15:18:42
-*/
+ * @Author: Mujib Ansari 
+ * @Date: 2018-05-21 10:15:17 
+ * @Last Modified by: Mujib Ansari
+ * @Last Modified time: 2018-05-21 10:18:30
+ */
+
 
 'use strict';
-function sortByMergeSort() {
-	this.addDashed();
-	console.log( '--- Merge Sort Started ---' );
 
-	// ---- reseting array
-	this.resetArray();
-	this.calculateEstimate( true );
-	
-	this.arrayToSort = mergeSort( this.arrayToSort );
-	console.log( this.arrayToSort );
-	this.calculateEstimate( false );
-	console.log( '--- Merge Sort Ended ---' );
-	this.addDashed();
-}
+(
+	function( window ) {
 
-function mergeSort( p_arr ) {
-	var nLen = p_arr.length;
+		var MergeSort = function( p_data ) {
 
-	if( nLen < 2 )
-		return p_arr;
-	else {
+			addDash();
+			logInfoMessage( 'Merge Sort' );
+			calcEstimate( true );
 
-		var mid = Math.floor( nLen/2 ),
-			left = p_arr.slice( 0, mid ),
-			right = p_arr.slice( mid );
+			doMergeSort( p_data, () => {
+				calcEstimate( false );
+			} );
 
-		//send left and right to the mergeSort to broke it down into pieces
-		//then merge those
-		return merge(mergeSort(left),mergeSort(right));
-	}
-};
+			function doMergeSort( p_data, p_callback ) {
 
-function merge( p_left, p_right ) {
+				let testArr = [ ...p_data ];
 
-	var result = [],
-		l_len = p_left.length,
-		r_len = p_right.length,
-		l = 0,
-		r = 0;
+				if( p_callback )
+					p_callback();
 
-	while( l < l_len && r < r_len ) {
+			};
 
-		if( p_left[ l ] < p_right[ r ] )
-			result.push( p_left[ l++ ] );
-		else
-			result.push( p_right[ r++ ] );
+		};
 
-	}
+		logInfoMessage( 'MergeSort.js loaded.' );
+		window.MergeSort = MergeSort;
 
-
-	//remaining part needs to be addred to the result
-	return result.concat( p_left.slice( l ) ).concat( p_right.slice( r ) );
-};
+	}( window )
+);

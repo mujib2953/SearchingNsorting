@@ -1,9 +1,14 @@
 /*
  * @Author: Mujib Ansari 
  * @Date: 2018-05-20 20:40:42 
- * @Last Modified by:   Mujib Ansari 
- * @Last Modified time: 2018-05-20 20:40:42 
+ * @Last Modified by: Mujib Ansari
+ * @Last Modified time: 2018-05-21 10:13:38
  */
+
+/* 
+	In this we will find the min or max value's position and then
+	will place accordingly 
+*/
 
 'use strict';
 
@@ -50,6 +55,7 @@
 
 		};
 
+		logInfoMessage( 'SelectionSort.js loaded.' );
 		window.SelectionSort = SelectionSort;
 	}()
 );

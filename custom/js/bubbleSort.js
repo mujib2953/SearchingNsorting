@@ -2,7 +2,7 @@
  * @Author: Mujib Ansari 
  * @Date: 2018-05-20 16:47:31 
  * @Last Modified by: Mujib Ansari
- * @Last Modified time: 2018-05-20 16:51:58
+ * @Last Modified time: 2018-05-21 09:05:44
  */
 
 'use strict';
@@ -52,5 +52,6 @@
 
 	}
 
+	logInfoMessage( 'BubbleSort.js loaded.' );
 	window.BubbleSort = BubbleSort;
 }( window ) );

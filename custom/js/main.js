@@ -2,7 +2,7 @@
  * @Author: Mujib Ansari 
  * @Date: 2018-05-17 13:18:46 
  * @Last Modified by: Mujib Ansari
- * @Last Modified time: 2018-05-20 20:40:30
+ * @Last Modified time: 2018-05-21 10:14:48
  */
 
 require.config({
@@ -14,7 +14,9 @@ require.config({
         common: './custom/js/common',
 
         bubbleSort: './custom/js/bubbleSort',
-        selectionSort: './custom/js/selectionSort'
+        selectionSort: './custom/js/selectionSort',
+        insertionSort: './custom/js/insertionSort',
+        mergeSort: './custom/js/mergeSort'
     },
 
     shim: {
@@ -23,7 +25,9 @@ require.config({
                 'jQuery',
                 'bootstrapJS',
                 'bubbleSort',
-                'selectionSort'
+                'selectionSort',
+                'insertionSort',
+                'mergeSort'
             ],
         },
         'bootstrapJS': {

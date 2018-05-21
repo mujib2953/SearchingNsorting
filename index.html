@@ -10,21 +10,30 @@
             src="./vendor/js/require.js"
         ></script>
 
-    
-        <!-- <script type="text/javascript" src="vendor/js/jquery.min.js"></script>
-        <script type="text/javascript" src="vendor/js/bootstrap.min.js"></script>
 
+        <link 
+            rel="stylesheet"
+            type="text/css"
+            href="vendor/css/bootstrap.min.css"
+        />
+        
+        <link 
+            rel="stylesheet"
+            type="text/css"
+            href="custom/css/custom.css"
+        />
 
-        <script type="text/javascript" src="custom/js/common.js"></script>
-        <script type="text/javascript" src="custom/js/bubbleSort.js"></script>
-        <script type="text/javascript" src="custom/js/selectionSort.js"></script>
-        <script type="text/javascript" src="custom/js/insertionSort.js"></script>
-        <script type="text/javascript" src="custom/js/mergeSort.js"></script>
-        <script type="text/javascript" src="custom/js/heapSort.js"></script> -->
+        <link 
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="./favicon.ico"
+        />
 
-
-        <link rel="stylesheet" type="text/css" href="vendor/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="custom/css/custom.css">
+        <link 
+            rel="icon"
+            type="image/x-icon"
+            href="./favicon.ico"
+        />
     </head>
     <body>
 
@@ -49,7 +58,8 @@
                     Note: The time took to sort is totally depends on Your System configuration and load on CPU.
                 </p>
                 
-                <p class="bubble-output sMsg">1. Bubble Sort
+                <p class="bubble-output sMsg">
+                    1. Bubble Sort
                     <button 
                         type="button"
                         class="btn btn-info  pullRight" 
@@ -60,7 +70,8 @@
                     </button>
                 </p>
                 
-                <p class="selection-output sMsg">2. Selection Sort
+                <p class="selection-output sMsg">
+                    2. Selection Sort
                     <button 
                         type="button"
                         class="btn btn-info pullRight"
@@ -72,19 +83,35 @@
                 </p>
                 
 
-                <p class="insertion-output sMsg">3. Insertion Sort
-                    <button type="button" class="btn btn-info  pullRight disabled" id="InsertionBtn">Insertion Sort</button>
+                <p class="insertion-output sMsg">
+                    3. Insertion Sort
+                    <button
+                        type="button"
+                        class="btn btn-info pullRight" 
+                        id="InsertionBtn"
+                        pageName="InsertionSort"
+                    >
+                        Insertion Sort
+                    </button>
                 </p>
                 
 
-                <p class="merge-output sMsg">4. Merge Sort
-                    <button type="button" class="btn btn-info  pullRight" id="MergeBtn">Merge Sort</button>
+                <p class="merge-output sMsg">
+                    4. Merge Sort
+                    <button
+                        type="button"
+                        class="btn btn-info pullRight"
+                        id="MergeBtn"
+                        pageName="MergeSort"
+                    >
+                        Merge Sort
+                    </button>
                 </p>
                 
 
-                <p class="heap-output sMsg">5. Heap Sort
+                <!-- <p class="heap-output sMsg">5. Heap Sort
                     <button type="button" class="btn btn-info  pullRight" id="HeapBtn">Heap Sort</button>
-                </p>
+                </p> -->
                 
             </div>
     	</div>
